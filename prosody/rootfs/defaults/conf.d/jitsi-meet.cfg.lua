@@ -8,7 +8,7 @@ http_default_host = "{{ .Env.XMPP_DOMAIN }}"
 
 {{ $ENABLE_AUTH := .Env.ENABLE_AUTH | default "0" | toBool }}
 {{ $ENABLE_GUEST_DOMAIN := and $ENABLE_AUTH (.Env.ENABLE_GUESTS | default "0" | toBool)}}
-{{ $AUTH_TYPE := .Env.AUTH_TYPE | default "internal" }}
+{{ $AUTH_TYPE := .Env.AUTH_TYPE | default "jwt" }}
 {{ $JWT_ASAP_KEYSERVER := .Env.JWT_ASAP_KEYSERVER | default "" }}
 {{ $JWT_ALLOW_EMPTY := .Env.JWT_ALLOW_EMPTY | default "0" | toBool }}
 {{ $JWT_AUTH_TYPE := .Env.JWT_AUTH_TYPE | default "token" }}

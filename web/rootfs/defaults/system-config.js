@@ -16,6 +16,8 @@ if (!config.hasOwnProperty('hosts')) config.hosts = {};
 
 config.hosts.domain = '{{ $XMPP_DOMAIN }}';
 config.focusUserJid = '{{$JICOFO_AUTH_USER}}@{{$XMPP_AUTH_DOMAIN}}';
+config.enableUserRolesBasedOnToken= true;
+config.defaultLanguage = 'es'
 
 {{ if $ENABLE_SUBDOMAINS -}}
 var subdomain = "<!--# echo var="subdomain" default="" -->";
